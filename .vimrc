@@ -272,7 +272,10 @@ let g:vimfiler_safe_mode_by_deault = 0
 nnoremap <silent> <Leader>fe :<C-u>VimFilerBufferDir -quit<CR>
 nnoremap <silent> <Leader>fi :<C-u>VimFilerBufferDir -split -simple -winwidth=35 -no-quit<CR>
 
+#vim-surroundをrepeatできるようにするためone set
 call dein#add('tpope/vim-surround')
+call dein#add('tpope/vim-repeat')
+
 
 " Add or remove your plugins here:
 "call dein#add('Shougo/neosnippet.vim')
