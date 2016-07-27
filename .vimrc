@@ -256,7 +256,7 @@ call dein#begin(expand('~/.vim'))
 " Required:  
 call dein#add('Shougo/dein.vim')
 
-call dein#add('Shougo/vimproc')
+call dein#add('Shougo/vimproc', {'build': 'make'})
 let g:vimproc#download_windows_dll = 1
 
 call dein#add('Shougo/unite.vim')
@@ -272,7 +272,7 @@ let g:vimfiler_safe_mode_by_deault = 0
 nnoremap <silent> <Leader>fe :<C-u>VimFilerBufferDir -quit<CR>
 nnoremap <silent> <Leader>fi :<C-u>VimFilerBufferDir -split -simple -winwidth=35 -no-quit<CR>
 
-#vim-surroundをrepeatできるようにするためone set
+" vim-surroundをrepeatできるようにするため
 call dein#add('tpope/vim-surround')
 call dein#add('tpope/vim-repeat')
 
@@ -320,15 +320,11 @@ endif
 call dein#add('itchyny/lightline.vim')
 
 call dein#add('itchyny/landscape.vim')
-
-" colorscheme landscape
-if !has('gui_running')
-    set t_Co=256
-endif
-let g:lightline = {
-            \'colorscheme': 'landscape',
-            \ }
-
+call dein#add('altercation/vim-colors-solarized')
+call dein#add('tomasr/molokai')
+syntax on
+colorscheme molokai
+set background=dark
 " Required:
 filetype plugin indent on
 "
