@@ -288,9 +288,10 @@ nmap s <plug>(easymotion-s2)
 let g:EasyMotion_keys='hjklasdfgyuiopqwertnmzxcvb'
 let g:EasyMotion_leader_key="'"
 let g:EasyMotion_grouping=1
+let g:EasyMotion_smartcase = 1
 hi EasyMotionTarget ctermbg=none ctermfg=red
 hi EasyMotionShade ctermbg=none ctermfg=blue
-let g:EasyMotion_use_migemo = 1
+" let g:EasyMotion_use_migemo = 1
 
 call dein#add('nathanaelkane/vim-indent-guides')
 
@@ -316,15 +317,16 @@ if has('python3')
     autocmd FileType python setlocal completeopt-=preview
 endif
 
+" call dein#add('JuliaLang/julia-vim')
+
 
 call dein#add('itchyny/lightline.vim')
 
+" colorscheme
 call dein#add('itchyny/landscape.vim')
 call dein#add('altercation/vim-colors-solarized')
 call dein#add('tomasr/molokai')
-syntax on
-colorscheme molokai
-set background=dark
+
 " Required:
 filetype plugin indent on
 "
@@ -335,3 +337,6 @@ if dein#check_install()
 endif
 
 "End dein Scripts-------------------------
+colorscheme solarized
+syntax on
+set background=dark
