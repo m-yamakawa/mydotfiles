@@ -293,7 +293,9 @@ hi EasyMotionTarget ctermbg=none ctermfg=red
 hi EasyMotionShade ctermbg=none ctermfg=blue
 " let g:EasyMotion_use_migemo = 1
 
-call dein#add('nathanaelkane/vim-indent-guides')
+call dein#add('Yggdroot/indentLine')
+let g:indentLine_color_toerm = 111
+set list listchars=tab:\¦\
 
 if has('python3')
     call dein#add('davidhalter/jedi-vim')
@@ -317,15 +319,14 @@ if has('python3')
     autocmd FileType python setlocal completeopt-=preview
 endif
 
-" call dein#add('JuliaLang/julia-vim')
-
-
 call dein#add('itchyny/lightline.vim')
 
 " colorscheme
 call dein#add('itchyny/landscape.vim')
 call dein#add('altercation/vim-colors-solarized')
 call dein#add('tomasr/molokai')
+call dein#add('thinca/vim-quickrun')
+call dein#add('juliaLang/julia-vim')
 
 " Required:
 filetype plugin indent on
